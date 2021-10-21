@@ -1,0 +1,9 @@
+type: marketplace
+title: Sharp Shooter Course
+language: English
+summary: |+
+  The Olympic Games is a remarkable event. There are so many kinds of sport. Would you like to participate, at least virtually? How about the sports shooting? Some math, some physics, some Java Swing - and we will get the sports shooting simulator game.
+
+programming_language: Java
+content:
+- lesson1

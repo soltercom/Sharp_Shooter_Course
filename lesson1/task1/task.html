@@ -1,0 +1,61 @@
+<html>
+
+<h2>Description</h2>
+
+<p>In this project, we will develop a shooting simulator.</p>
+<p>Game description:<br>
+    There is a fixed target in the center of the playing field.<br>
+    The player uses the keyboard to move the gun sight to the center of the target.<br>
+    After aiming, the player presses the button and thus makes a shot.<br>
+    The closer the gunshot to the center of the target, the more points the player gets.<br>
+    The goal of this game is to score as many points as possible in a limited number of attempts.<br>
+    Also, we will add some special effects to decrease shooting precision.<br>
+</p>
+
+<p>An example of the game demonstrates in figure <b>Example 1.</b></p>
+
+<p>In this stage, we will create a game field and graphical objects.</p>
+<p>You will construct three graphical objects:
+<li><b>Target</b> is a family of concentric circles. The <b>Target</b> always stays still.</li>
+<li><b>Gun Sight</b> indicates the location of the intended shot.</li>
+<li><b>Hole of Bullet</b> points a traces of gunfire. They will appear as the shots happen.</li>
+</p>
+
+<br>
+<h2>Objectives</h2>
+
+<p>Create the main window of the program with two parts:
+<li><b>Statusbar</b> - JLabel. Due to testing reasons, you need to set the name <b>Statusbar</b> to it.<br>
+The <b>Statusbar</b> is intended to inform the player and must contain some text.
+</li>
+<li><b>Canvas</b> - extends JPanel. Due to testing reasons, you need to set the name <b>Canvas</b> to it.<br>
+The <b>Canvas</b> should be in focus.
+</li>
+</p>
+
+<br>
+<p>You should draw the <b>Target</b> on the <b>Canvas</b> with the following requirements:
+<li><b>The center point</b> of the <b>Target</b> should be at <b>(350, 350).</b></li>
+<li>The <b>Target</b> should contain ten concentric circles with incrementing of radius in 30 pixels.</li>
+<li>The colors of the circles should be <i>Color.BLACK</i> and <i>Color.WHITE</i>, and alternate as shown in <b>Example 2</b>.</li>
+<li>The background color of the <b>Target</b> should be Color.DARK_GRAY.</li>
+</p>
+
+<br>
+<p>You should draw the <b>Bullet hole</b> on the <b>Canvas</b> <u>with the center</u> at the point <b>(300, 500)</b>
+with a color different from Color.BLACK, Color.WHITE, Color.DARK_GRAY.</p>
+
+<br>
+<p>You can draw the <b>Gun Sight</b> at your discretion.</p>
+
+<br>
+<h2>Examples</h2>
+
+<h3>Example 1: <i>The playing field</i></h3>
+<img src="Example1.png">
+
+<br>
+<h3>Example 2: <i>The Target</i></h3>
+<img src="Example2.png"/>
+
+</html>

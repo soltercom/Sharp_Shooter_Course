@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: test/SharpShooterTest.java
+  visible: false
+- name: src/ru/spb/altercom/Canvas.java
+  visible: true
+- name: src/ru/spb/altercom/Controller.java
+  visible: true
+- name: src/ru/spb/altercom/SharpShooter.java
+  visible: true
+- name: src/ru/spb/altercom/Target.java
+  visible: true
+- name: src/ru/spb/altercom/Sight.java
+  visible: true
+- name: src/ru/spb/altercom/BulletHole.java
+  visible: true
