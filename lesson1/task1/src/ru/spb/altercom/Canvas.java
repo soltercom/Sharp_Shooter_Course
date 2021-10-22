@@ -26,6 +26,7 @@ public class Canvas extends JPanel {
 
         g2.drawImage(Target.IMAGE, 0, 0, null);
         g2.drawImage(BulletHole.IMAGE, 300 - BULLET_HOLE_RADIUS, 500 - BULLET_HOLE_RADIUS, null);
+        g2.drawImage(Sight.IMAGE, 600, 50, null);
 
     }
 

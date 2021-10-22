@@ -14,3 +14,5 @@ files:
   visible: true
 - name: src/ru/spb/altercom/BulletHole.java
   visible: true
+- name: Example2.png
+  visible: true
