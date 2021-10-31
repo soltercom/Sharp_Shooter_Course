@@ -132,15 +132,17 @@ public class SharpShooterTest extends SwingTest {
         return correct();
     }
 
+    // TODO: The sight should stay on screen
+
     private static void assertEquals(
         final Object expected,
         final Object actual,
         final String error,
         final Object... args) {
 
-    if (!expected.equals(actual)) {
-        final var feedback = MessageFormat.format(error, args);
-        throw new WrongAnswer(feedback);
+        if (!expected.equals(actual)) {
+            final var feedback = MessageFormat.format(error, args);
+            throw new WrongAnswer(feedback);
+        }
     }
-  }
 }
