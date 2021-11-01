@@ -2,8 +2,7 @@
 
 <h2>Description</h2>
 
-<p>In this project, we will develop a shooting simulator.</p>
-<p>Game description:<br>
+<p>The game we are developing can be specified as follows::<br>
     There is a fixed target in the center of the playing field.<br>
     The player uses the keyboard to move the gun sight to the center of the target.<br>
     After aiming, the player presses the button and thus makes a shot.<br>
@@ -19,39 +18,39 @@
 <br>
 <p>In this stage, we will create a game field and graphical objects.</p>
 <p>You will construct three graphical objects:
-<li><b>Target</b> is a family of concentric circles. The <b>Target</b> always stays still.</li>
-<li><b>Gun Sight</b> indicates the location of the intended shot.</li>
-<li><b>Hole of Bullet</b> points a traces of gunfire. They will appear as the shots happen.</li>
+<li><code>Target</code> is a family of concentric circles. The <code>Target</code> always stays still.</li>
+<li><code>Gun Sight</code> indicates the location of the intended shot.</li>
+<li><code>Hole of Bullet</code> points a traces of gunfire. They will appear as the shots happen.</li>
 </p>
 
 <br>
 <h2>Objectives</h2>
 
 <p>Create the main window of the program with two parts:
-<li><b>Statusbar</b> - JLabel. Due to testing reasons, you need to set the name <b>Statusbar</b> to it.<br>
-The <b>Statusbar</b> is intended to inform the player and must contain some text.
+<li><code>Statusbar</code> - JLabel. Due to testing reasons, you need to set the name <code>Statusbar</code> to it.<br>
+The <code>Statusbar</code> is intended to inform the player and must contain some text.
 </li>
-<li><b>Canvas</b> - extends JPanel. Due to testing reasons, you need to set the name <b>Canvas</b> to it.<br>
-The <b>Canvas</b> should be in focus.
+<li><code>Canvas</code> - extends JPanel. Due to testing reasons, you need to set the name <code>Canvas</code> to it.<br>
+The <code>Canvas</code> should be in focus.
 </li>
 </p>
 
 <br>
-<p>You should draw the <b>Target</b> on the <b>Canvas</b> with the following requirements:
-<li><b>The center point</b> of the <b>Target</b> should be at <b>(350, 350).</b></li>
-<li>The <b>Target</b> should contain ten concentric circles with incrementing of radius in 30 pixels.</li>
-<li>The colors of the circles should be <i>Color.BLACK</i> and <i>Color.WHITE</i>, and alternate as shown in <b>Example 1</b>.</li>
-<li>The background color of the <b>Target</b> should be Color.DARK_GRAY.</li>
+<p>You should draw the <code>Target</code> on the <code>Canvas</code> with the following requirements:
+<li><code>The center point</code> of the <code>Target</code> should be at <code>(350, 350)</code>.</li>
+<li>The <code>Target</code> should contain ten concentric circles with incrementing of radius in 30 pixels.</li>
+<li>The colors of the circles should be <code>Color.BLACK</code> and <code>Color.WHITE</code>, and alternate as shown in <i>Example 1</i>.</li>
+<li>The background color of the <code>Target</code> should be Color.DARK_GRAY.</li>
 </p>
 
 <br>
-<p>You should draw the <b>Bullet hole</b> on the <b>Canvas</b> <u>with the center</u> at the point <b>(300, 500)</b>
+<p>You should draw the <code>Bullet hole</code> on the <code>Canvas</code> <u>with the center</u> at the point <code>(300, 500)</code>
 with a color different from Color.BLACK, Color.WHITE, Color.DARK_GRAY.</p>
 
 <br>
-<p>You can draw the <b>Gun Sight</b> at your discretion.</p>
+<p>You can draw the <code>Gun Sight</code> at your discretion.</p>
 
-<p>As a result, you should have something like in <b>Example 2.</b></p>
+<p>As a result, you should have something like in <i>Example 2.</i></p>
 
 <br>
 <h2>Examples</h2>

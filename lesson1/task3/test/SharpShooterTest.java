@@ -21,6 +21,7 @@ public class SharpShooterTest extends SwingTest {
     private static final int TARGET_CENTER = 350;
     private static final int SIGHT_RADIUS = 40;
     private static final int MOVE_STEP = 10;
+    private final static int MAX_SHOOTING_ATTEMPTS = 12;
 
     public SharpShooterTest() {
       super(new SharpShooter());
@@ -49,7 +50,7 @@ public class SharpShooterTest extends SwingTest {
     }
 
     @DynamicTest(feedback = "After start the Statusbar should contain: " +
-            "Shootings left: 12, Your score: 0")
+            "Shootings left: " + MAX_SHOOTING_ATTEMPTS + ", Your score: 0")
     CheckResult test2() {
 
         canvas.pressKey(VK_SPACE);
@@ -59,7 +60,7 @@ public class SharpShooterTest extends SwingTest {
                 "Check statusbar text immediately after the game start.");
 
         assertEquals(true,
-                statusbar.text().toLowerCase().contains("shootings left: 12"),
+                statusbar.text().toLowerCase().contains("shootings left: " + MAX_SHOOTING_ATTEMPTS),
                 "Wrong calculation of the attempts number.");
 
         assertEquals(true,
@@ -98,12 +99,12 @@ public class SharpShooterTest extends SwingTest {
         assertEquals(true,
             statusbar.text().toLowerCase().contains("shootings left: " + attempts),
         "Wrong calculation of the attempts number. " +
-             "After " + number + " shoot it should be: " + attempts + ".");
+             "After {0} shoot it should be: {1}.", number, attempts);
 
         assertEquals(true,
             statusbar.text().toLowerCase().contains("your score: " + score),
         "Wrong calculation of the score. " +
-             "After " + number + " shoot it should be: " + score + ".");
+             "After {0} shoot it should be: {1}.", number, attempts);
 
         return correct();
     }
@@ -190,5 +191,4 @@ public class SharpShooterTest extends SwingTest {
             throw new WrongAnswer(feedback);
         }
     }
-
 }

@@ -8,7 +8,7 @@ import java.util.List;
 public class Controller {
 
     public static final int WIDTH = 720;
-    public static final int HEIGHT = 750;
+    public static final int HEIGHT = 760;
 
     public static final int TARGET_CIRCLE_STEP = 30;
     public static final int TARGET_CENTER = 350;
@@ -133,8 +133,8 @@ public class Controller {
     }
 
     private void initialPosition() {
-        sightX = TARGET_CENTER;
-        sightY = TARGET_CENTER;
+        sightX = 100;
+        sightY = 100;
     }
 
     private void initGame() {
