@@ -58,6 +58,27 @@ public class SharpShooterTest extends SwingTest {
       return correct();
   }
 
+    @DynamicTest(feedback = "It should be impossible to return to the start point.")
+    CheckResult test2() {
+
+        for (int i = START_X; i < TARGET_CENTER; i += MOVE_STEP) {
+            canvas.pressKey(VK_LEFT);
+        }
+        for (int i = START_Y; i < TARGET_CENTER; i += MOVE_STEP) {
+            canvas.pressKey(VK_UP);
+        }
+
+        canvas.pressKey(VK_SPACE);
+
+        var screenshot = takeScreenshot();
+
+        assertEquals(false,
+                checkBullet(screenshot, START_X, START_Y),
+                "It should be impossible to return to the start point." );
+
+        return correct();
+    }
+
   private BufferedImage takeScreenshot() {
     var screenshotTaker = new ScreenshotTaker();
     return screenshotTaker.takeScreenshotOf(canvas.target());

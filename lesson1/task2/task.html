@@ -1,52 +1,71 @@
 <html>
 
-<h2>ru.spb.altercom.Task Description: Tips & Tricks</h2>
+<h2>Description</h2>
 
-<p>This is a task description file.
-Its content will be displayed to a learner
-in the <strong>ru.spb.altercom.Task Description</strong> window.</p>
+<p>It is time to add in our game the prime function there is the ability of the players to shoot at the target.
+    The shooting consists of two parts: targeting and firing.
+    The graphical object <code>Gun Sight</code> is responsible for aiming in our program.
+    In our last task, we have learned how to draw this object.
+    Now it is our job to make <code>Gun Sight</code> move under player control.
+</p>
+<p>
+    Let us select arrow buttons to control the movement of the <code>Gun Sight</code>.
+    After each key pressed event, the sight moves to a new location.
+    Once the guidance is complete, the user pushes a space button and makes a shot.
+    As a result, the mark on the target <code>Hole of Bullet</code> appears.
+    Meantime, the old bullet holes do not disappear from the screen.
+</p>
+<p>
+    Each time the position of the <code>Gun Sight</code> changes or a new <code>Hole of Bullet</code> appears, the <code>Canvas</code> will redraw as follows:
+    <ol>
+        <li>Draw the <code>Target</code> on the <code>Canvas</code> as in the previous task.</li>
+        <li>Draw the <code>Bullet Holes</code> on the <code>Canvas</code>.</li>
+        <li>Draw the <code>Gun Sight</code> on the <code>Canvas</code>.</li>
+    </ol>
+</p>
 
-<p>It supports both Markdown and HTML.
-To toggle the format, you can rename <strong>task.md</strong>
-to <strong>task.html</strong>, or vice versa.
-The default task description format can be changed
-in <strong>Preferences | Tools | Education</strong>,
-but this will not affect any existing task description files.</p>
+<div class="hint">
+    At the beginning of the program, you may create images
+    for the <code>Target</code>, the <code>Gun Sight</code>, the <code>Bullet Hole</code>
+    and place them in separate <code>BufferedImage</code> variables.
+    Use those images with the method <code>drawImage</code>
+    in the predefined method <code>paintComponent</code> of the <code>Canvas</code>.
+</div>
 
-<p>The following features are available in
-<strong>task.md/task.html</strong>
-which are specific to the EduTools plugin:</p>
 
-<ul>
-<li>Hints can be added anywhere in the task text.
-Type "hint" and press Tab.
-Hints should be added to an empty line in the task text.
-In hints you can use both HTML and Markdown.
-<div class="hint">Text of your hint</div></li>
+<br>
+<h2>Objectives</h2>
 
-<li>You may need to refer your learners to a particular lesson,
-task, or file. To achieve this, you can use the in-course links.
-Specify the path using the <code>&lt;a href="course://lesson1/task1/file1"&gt;
-link_text&lt;/a&gt;</code> format.</li><br>
+<p>Implement components and display it on the <code>Canvas</code>:</p>
+<p>
+    The <code>Target</code> must satisfy the requirements of the previous task, that is:
+    <ul>
+        <li><code>The center point</code> of the <code>Target</code> should be at <code>(350, 350)</code>.</li>
+        <li>The <code>Target</code> should contain ten concentric circles with incrementing of radius in 30 pixels.</li>
+        <li>The colors of the circles should be <code>Color.BLACK</code> and <code>Color.WHITE</code>, and alternate.</li>
+        <li>The background color of the <code>Target</code> should be <code>Color.DARK_GRAY</code>.</li>
+    </ul>
+</p>
+<p>
+    For testing purposes, the initial position of the <code>Gun Sight</code> should be at the center of the <code>Target</code>.
+    Draw your attention that the centers of those objects should coincide.<br>
+    The following keys control the position of the <code>Gun Sight</code>:
+    <ul>
+        <li><code>VK_UP</code> moves it to the up by 10 pixels,</li>
+        <li><code>VK_DOWN</code> moves it to the down by 10 pixels,</li>
+        <li><code>VK_LEFT</code> moves it to the left by 10 pixels,</li>
+        <li><code>VK_RIGHT</code> moves it to the right by 10 pixels.</li>
+    </ul>
+    The <code>Gun Sight</code> must not leave the screen.
+    Due to testing reasons, you should limit the horizontal and vertical coordinates
+    of <u>the center</u> of the <code>Gun Sight</code> in the range from <code>40</code> to <code>660</code>.
+</p>
 
-<li>You can insert shortcuts in the task description.
-While <strong>task.html/task.md</strong> is open,
-right-click anywhere on the <strong>Editor</strong> tab
-and choose the <strong>Insert shortcut</strong> option
-from the context menu.
-For example: &amp;shortcut:FileStructurePopup;.</li><br>
+<p>
 
-<li>Insert the &percnt;<code>IDE_NAME</code>&percnt; macro,
-which will be replaced by the actual IDE name.
-For example, <strong>%IDE_NAME%</strong>.</li><br>
+</p>
 
-<li>Insert PSI elements, by using links like
-<code>&lt;a href="psi_element://link.to.element"&gt;element description&lt;/a&gt;</code>.
-To get such a link, right-click the class or method
-and select <strong>Copy Reference</strong>.
-Then press &amp;shortcut:EditorPaste;
-to insert the link where appropriate.
-For example, a
-<a href="psi_element://java.lang.String#contains">link to the "contains" method</a>.</li>
-</ul>
+<br>
+<h2>Examples</h2>
+
 </html>
