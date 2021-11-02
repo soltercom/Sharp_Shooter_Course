@@ -33,11 +33,15 @@ public class Controller {
 
     private GAME_STATE gameState = GAME_STATE.INIT;
 
+    private final Force force;
+
     public Controller() {
         this.statusbar = new JLabel();
         this.statusbar.setName("Statusbar");
         this.canvas = new Canvas(this);
         this.canvas.setName("Canvas");
+
+        this.force = new Force();
 
         initGame();
     }
@@ -90,26 +94,44 @@ public class Controller {
 
     public void moveSightLeft() {
         if (gameState == GAME_STATE.STARTED) {
-            sightX -= 10;
+            force.addLeftMovement();
         }
     }
 
     public void moveSightRight() {
         if (gameState == GAME_STATE.STARTED) {
-            sightX += 10;
+            force.addRightMovement();
         }
     }
 
     public void moveSightUp() {
         if (gameState == GAME_STATE.STARTED) {
-            sightY -= 10;
+            force.addUpMovement();
         }
     }
 
     public void moveSightDown() {
         if (gameState == GAME_STATE.STARTED) {
-            sightY += 10;
+            force.addDownMovement();
         }
+    }
+
+    public boolean moveSight() {
+        var velocity = force.getVelocity();
+
+        this.sightX += (int) velocity.getX();
+        sightX = Math.max(SIGHT_RADIUS, sightX);
+        sightX = Math.min(2 * TARGET_CENTER - SIGHT_RADIUS, sightX);
+
+        sightY += (int) velocity.getY();
+        sightY = Math.max(SIGHT_RADIUS, sightY);
+        sightY = Math.min(2 * TARGET_CENTER - SIGHT_RADIUS, sightY);
+
+        return force.hasForces();
+    }
+
+    public boolean addRandomMovement() {
+        return force.addRandomMovement();
     }
 
     public void addBulletHole() {

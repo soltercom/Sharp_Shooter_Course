@@ -1,52 +1,53 @@
 <html>
 
-<h2>Task Description: Tips & Tricks</h2>
+<h2>Description</h2>
 
-<p>This is a task description file.
-Its content will be displayed to a learner
-in the <strong>Task Description</strong> window.</p>
+<p>
+    There are a couple of ideas on how to improve our program.
+</p>
+<p>
+    First, in the real world, objects move due to the laws of physics.
+    Generally, it is a movement with acceleration, not linear.
+    In the physical world, objects don’t start or stop instantaneously.
+    Instead, they take time to speed up and slow down.
+    The following figure shows the difference between the characteristics of motion in our program
+    and movement with acceleration.
+<p>
+<img src="Figure 4_1.png">
+<p>
+    So far in our program, when we move the <code>Gun Sight</code>, for instance, to the right,
+    we increase the horizontal coordinate once <code>(x += 10)</code> and update the screen.
+    But to simulate accelerated motion, we have to change this algorithm.
+    We should create a sequence of changes to the horizontal variable, for instance, <code>(1, 2, 4, 2, 1)</code>.
+    For each element of this collection, we should do the following operations:
+    <ul>
+        <li><code>x += 10;</code></li>
+        <li><code>update screen;</code></li>
+    </ul>
+    I hope the idea is clear.
+</p>
+<p>
+    Second, in real life, it is not so easy to hit a target.
+    Hands are shaking, the wind blows, gun defective.
+    It is all the work of some forces.
+    Under Newton’s second law, force produces motion with acceleration.
+    That is, you can apply the algorithm discussed above.
+</p>
+<p>
+    We have considered one of a million options that we can use, so it is up to you to choose.
+</p>
+<br>
+<h2>Objectives</h2>
+<p>
+    The requirements of constructing graphical objects remain the same as in previous tasks.<br>
+    For testing purposes, the initial position of the center of the <code>Gun Sight</code> should be at the point <code>(100, 100)</code>.<br>
+    The main task is to make the accuracy of shooting as hard as possible.
+</p>
 
-<p>It supports both Markdown and HTML.
-To toggle the format, you can rename <strong>task.md</strong>
-to <strong>task.html</strong>, or vice versa.
-The default task description format can be changed
-in <strong>Preferences | Tools | Education</strong>,
-but this will not affect any existing task description files.</p>
+<h2>Examples</h2>
 
-<p>The following features are available in
-<strong>task.md/task.html</strong>
-which are specific to the EduTools plugin:</p>
+<h3>Example 1: <i>Example of shooting.</i></h3>
 
-<ul>
-<li>Hints can be added anywhere in the task text.
-Type "hint" and press Tab.
-Hints should be added to an empty line in the task text.
-In hints you can use both HTML and Markdown.
-<div class="hint">Text of your hint</div></li>
+<img src="Example 4_1.gif" alt="">
 
-<li>You may need to refer your learners to a particular lesson,
-task, or file. To achieve this, you can use the in-course links.
-Specify the path using the <code>&lt;a href="course://lesson1/task1/file1"&gt;
-link_text&lt;/a&gt;</code> format.</li><br>
-
-<li>You can insert shortcuts in the task description.
-While <strong>task.html/task.md</strong> is open,
-right-click anywhere on the <strong>Editor</strong> tab
-and choose the <strong>Insert shortcut</strong> option
-from the context menu.
-For example: &amp;shortcut:FileStructurePopup;.</li><br>
-
-<li>Insert the &percnt;<code>IDE_NAME</code>&percnt; macro,
-which will be replaced by the actual IDE name.
-For example, <strong>%IDE_NAME%</strong>.</li><br>
-
-<li>Insert PSI elements, by using links like
-<code>&lt;a href="psi_element://link.to.element"&gt;element description&lt;/a&gt;</code>.
-To get such a link, right-click the class or method
-and select <strong>Copy Reference</strong>.
-Then press &amp;shortcut:EditorPaste;
-to insert the link where appropriate.
-For example, a
-<a href="psi_element://java.lang.String#contains">link to the "contains" method</a>.</li>
-</ul>
 </html>

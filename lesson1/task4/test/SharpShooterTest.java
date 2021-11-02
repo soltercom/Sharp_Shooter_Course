@@ -41,15 +41,19 @@ public class SharpShooterTest extends SwingTest {
   CheckResult test1() {
 
       canvas.pressKey(VK_SPACE);
+      canvas.releaseKey(VK_SPACE);
 
       for (int i = START_X; i < TARGET_CENTER; i += MOVE_STEP) {
           canvas.pressKey(VK_RIGHT);
+          canvas.releaseKey(VK_RIGHT);
       }
       for (int i = START_Y; i < TARGET_CENTER; i += MOVE_STEP) {
           canvas.pressKey(VK_DOWN);
+          canvas.releaseKey(VK_DOWN);
       }
 
       canvas.pressKey(VK_SPACE);
+      canvas.releaseKey(VK_SPACE);
 
       assertEquals(false,
         statusbar.text().toLowerCase().contains("your score: " + 10),
@@ -63,12 +67,15 @@ public class SharpShooterTest extends SwingTest {
 
         for (int i = START_X; i < TARGET_CENTER; i += MOVE_STEP) {
             canvas.pressKey(VK_LEFT);
+            canvas.releaseKey(VK_LEFT);
         }
         for (int i = START_Y; i < TARGET_CENTER; i += MOVE_STEP) {
             canvas.pressKey(VK_UP);
+            canvas.releaseKey(VK_UP);
         }
 
         canvas.pressKey(VK_SPACE);
+        canvas.releaseKey(VK_SPACE);
 
         var screenshot = takeScreenshot();
 

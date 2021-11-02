@@ -14,3 +14,9 @@ files:
   visible: true
 - name: test/SharpShooterTest.java
   visible: false
+- name: src/ru/spb/altercom/Force.java
+  visible: true
+- name: Example 4_1.gif
+  visible: true
+- name: Figure 4_1.png
+  visible: true
