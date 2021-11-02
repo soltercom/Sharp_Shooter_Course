@@ -43,7 +43,7 @@ public class SharpShooterTest extends SwingTest {
         }
 
         assertEquals(true,
-            statusbar.text().toLowerCase().contains("press space button to start the game."),
+            statusbar.text().toLowerCase().contains("press space button to start the game"),
             "Check statusbar text before game start.");
 
         return correct();
@@ -119,7 +119,7 @@ public class SharpShooterTest extends SwingTest {
                 "Check statusbar text after the end of the game.");
 
         assertEquals(true,
-                statusbar.text().toLowerCase().contains("game over."),
+                statusbar.text().toLowerCase().contains("game over"),
                 "Status bar should contain: Game over.");
 
         assertEquals(true,

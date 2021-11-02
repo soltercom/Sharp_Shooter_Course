@@ -14,3 +14,7 @@ files:
   visible: true
 - name: test/SharpShooterTest.java
   visible: false
+- name: Figure 3_1.png
+  visible: true
+- name: Example 3_1.png
+  visible: true

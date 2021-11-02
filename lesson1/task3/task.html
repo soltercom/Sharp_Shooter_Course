@@ -1,52 +1,53 @@
 <html>
 
-<h2>ru.spb.altercom.Task Description: Tips & Tricks</h2>
+<h2>Description</h2>
 
-<p>This is a task description file.
-Its content will be displayed to a learner
-in the <strong>ru.spb.altercom.Task Description</strong> window.</p>
+<p>Let’s add some logic to our program.<br>
+    The scenario of our game is in the following figure.
+    <br>
+    <img  src="Figure 3_1.png">
+    <br>
+    The game comprises three stages:
+    <ul>
+        <li><code>START</code> At this stage, we prepare all required variables
+            (for instance, the <code>Number of attempts</code>) and game screen, block movements of the <code>Gun Sight</code>.
+            Go to the next level after pressing the <code>SPACE</code> button.</li>
+        <li><code>GAME</code> Gameplay starts: listen to keyboard events and move the <code>Gun Sight</code>.
+            After each pressing on the <code>SPACE</code> button, add the <code>Bullet Hole</code> on the <code>Canvas</code>
+            and decrement the <code>Number of attempts</code> variable.
+            When the <code>Number of attempts</code> reaches zero, we move to the next stage.
+        </li>
+        <li><code>END</code> Gameplay stops: block movements of the <code>Gun Sight</code>
+            and creation of the new <code>Bullet Hole</code>. Put the final result on the screen.</li>
+    </ul>
+</p>
 
-<p>It supports both Markdown and HTML.
-To toggle the format, you can rename <strong>task.md</strong>
-to <strong>task.html</strong>, or vice versa.
-The default task description format can be changed
-in <strong>Preferences | Tools | Education</strong>,
-but this will not affect any existing task description files.</p>
+<p>
+    Speaking of results, we need to measure the shooting accuracy.
+    It is logical to assume that the closer you get to the center of the target, the higher the reward.
+    Accordingly, a hit in the central circle score 10 points, and an outer circle gives 1 point.
+    The other circles give in inverse proportion to their distance from the center.
+    The current information is displayed on the <code>Statusbar</code>.
+</p>
 
-<p>The following features are available in
-<strong>task.md/task.html</strong>
-which are specific to the EduTools plugin:</p>
+<h2>Objectives</h2>
 
-<ul>
-<li>Hints can be added anywhere in the task text.
-Type "hint" and press Tab.
-Hints should be added to an empty line in the task text.
-In hints you can use both HTML and Markdown.
-<div class="hint">Text of your hint</div></li>
+<p>
+    There are 12 attempts.
+    The requirements of constructing graphical objects remain the same as in previous tasks.
+    For testing purposes, the initial position of the <code>Gun Sight</code> should be at the center of the <code>Target</code>.
+    You should display the information about the game state in the <code>Statusbar</code>, as follows:
+    <ul>
+        <li>At the <code>START</code>, it contains text <code>Press SPACE button to start the game</code>. </li>
+        <li>During the <code>GAME</code>, it contains <code>Shootings left: {1}, your score: {2}</code>.
+            Where {1} - number of remaining attempts, {2} - total score.</li>
+        <li>At the <code>END</code>, it contains <code>Game over, your score: {1}. Where {1} - total score.</code></li>
+    </ul>
+</p>
 
-<li>You may need to refer your learners to a particular lesson,
-task, or file. To achieve this, you can use the in-course links.
-Specify the path using the <code>&lt;a href="course://lesson1/task1/file1"&gt;
-link_text&lt;/a&gt;</code> format.</li><br>
+<h2>Examples</h2>
 
-<li>You can insert shortcuts in the task description.
-While <strong>task.html/task.md</strong> is open,
-right-click anywhere on the <strong>Editor</strong> tab
-and choose the <strong>Insert shortcut</strong> option
-from the context menu.
-For example: &amp;shortcut:FileStructurePopup;.</li><br>
+<h3>Example 1: <i>Example of scoring after four shootings.</i></h3>
+<img src="Example 3_1.png">
 
-<li>Insert the &percnt;<code>IDE_NAME</code>&percnt; macro,
-which will be replaced by the actual IDE name.
-For example, <strong>%IDE_NAME%</strong>.</li><br>
-
-<li>Insert PSI elements, by using links like
-<code>&lt;a href="psi_element://link.to.element"&gt;element description&lt;/a&gt;</code>.
-To get such a link, right-click the class or method
-and select <strong>Copy Reference</strong>.
-Then press &amp;shortcut:EditorPaste;
-to insert the link where appropriate.
-For example, a
-<a href="psi_element://java.lang.String#contains">link to the "contains" method</a>.</li>
-</ul>
 </html>
