@@ -11,9 +11,9 @@
     <ul>
         <li><code>START</code> At this stage, we prepare all required variables
             (for instance, the <code>Number of attempts</code>) and game screen, block movements of the <code>Gun Sight</code>.
-            Go to the next level after pressing the <code>SPACE</code> button.</li>
+            Go to the next level after pressing the <code>SPACE</code> bar.</li>
         <li><code>GAME</code> Gameplay starts: listen to keyboard events and move the <code>Gun Sight</code>.
-            After each pressing on the <code>SPACE</code> button, add the <code>Bullet Hole</code> on the <code>Canvas</code>
+            After each pressing on the <code>SPACE</code> bar, add the <code>Bullet Hole</code> on the <code>Canvas</code>
             and decrement the <code>Number of attempts</code> variable.
             When the <code>Number of attempts</code> reaches zero, we move to the next stage.
         </li>
@@ -38,8 +38,8 @@
     For testing purposes, the initial position of the <code>Gun Sight</code> should be at the center of the <code>Target</code>.
     You should display the information about the game state in the <code>Statusbar</code>, as follows:
     <ul>
-        <li>At the <code>START</code>, it contains text <code>Press SPACE button to start the game</code>. </li>
-        <li>During the <code>GAME</code>, it contains <code>Shootings left: {1}, your score: {2} ({3})</code>.
+        <li>At the <code>START</code>, it contains text <code>Press SPACE bar to start the game</code>. </li>
+        <li>During the <code>GAME</code>, it contains <code>Bullets left: {1}, your score: {2} ({3})</code>.
             Where {1} - number of remaining attempts, {2} - the total score, {3} - the last score.</li>
         <li>At the <code>END</code>, it contains <code>Game over, your score: {1}. Where {1} - total score.</code></li>
     </ul>

@@ -34,7 +34,7 @@ public class SharpShooterTest extends SwingTest {
     private JPanelFixture canvas;
 
     @DynamicTest(feedback = "At start the Statusbar should contain: " +
-                            "Press SPACE button to start the game.")
+                            "Press the SPACE bar to start the game.")
     CheckResult test1() {
 
         // before the game start the sight should be immovable
@@ -43,24 +43,24 @@ public class SharpShooterTest extends SwingTest {
         }
 
         assertEquals(true,
-            statusbar.text().toLowerCase().contains("press space button to start the game"),
+            statusbar.text().toLowerCase().contains("press the space bar to start the game"),
             "Check statusbar text before game start.");
 
         return correct();
     }
 
     @DynamicTest(feedback = "After start the Statusbar should contain: " +
-            "Shootings left: " + MAX_SHOOTING_ATTEMPTS + ", Your score: 0")
+            "Bullets left: " + MAX_SHOOTING_ATTEMPTS + ", your score: 0")
     CheckResult test2() {
 
         canvas.pressKey(VK_SPACE);
 
         assertEquals(false,
-                statusbar.text().toLowerCase().contains("press space button to start the game."),
+                statusbar.text().toLowerCase().contains("press the space bar to start the game."),
                 "Check statusbar text immediately after the game start.");
 
         assertEquals(true,
-                statusbar.text().toLowerCase().contains("shootings left: " + MAX_SHOOTING_ATTEMPTS),
+                statusbar.text().toLowerCase().contains("bullets left: " + MAX_SHOOTING_ATTEMPTS),
                 "Wrong calculation of the attempts number.");
 
         assertEquals(true,
@@ -97,7 +97,7 @@ public class SharpShooterTest extends SwingTest {
         }
 
         assertEquals(true,
-            statusbar.text().toLowerCase().contains("shootings left: " + attempts),
+            statusbar.text().toLowerCase().contains("bullets left: " + attempts),
         "Wrong calculation of the attempts number. " +
              "After {0} shoot it should be: {1}.", number, attempts);
 
@@ -115,7 +115,7 @@ public class SharpShooterTest extends SwingTest {
         canvas.pressKey(VK_SPACE);
 
         assertEquals(false,
-                statusbar.text().toLowerCase().contains("shootings left:"),
+                statusbar.text().toLowerCase().contains("bullets left:"),
                 "Check statusbar text after the end of the game.");
 
         assertEquals(true,

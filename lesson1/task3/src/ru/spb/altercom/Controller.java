@@ -53,10 +53,10 @@ public class Controller {
     private void updateStatusbar() {
         switch (gameState) {
             case INIT:
-                statusbar.setText("Press SPACE button to start the game.");
+                statusbar.setText("Press the SPACE bar to start the game.");
                 break;
             case STARTED:
-                statusbar.setText(String.format("Shootings left: %d, Your score: %d (%d). Use: \u2192 \u2190 \u2191 \u2193 SPACE buttons.",
+                statusbar.setText(String.format("Bullets left: %d, your score: %d (%d). Use: \u2192 \u2190 \u2191 \u2193 SPACE buttons.",
                         MAX_SHOOTING_ATTEMPTS - shootCounter, totalScore, lastScore));
                 break;
             case OVER:
